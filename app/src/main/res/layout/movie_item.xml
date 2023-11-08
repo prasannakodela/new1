@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:background="@color/background">
+
+    <ImageView
+        android:id="@+id/thumb_nail"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="dsjhgfgfdsjhfh"
+        android:textSize="24dp"
+      android:textColor="@color/textcolor"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/release_date"
+        app:layout_constraintLeft_toRightOf="@id/thumb_nail"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:gravity="center"
+        android:text="dsjhgfgfdsjhfhgdj"
+        android:textSize="24dp"
+        android:textColor="@color/textcolor"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@id/vote_average"
+        app:layout_constraintLeft_toRightOf="@id/thumb_nail"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/vote_average"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:text="dsjhgfgfdsjhfhgdj"
+        android:textSize="24dp"
+        android:textColor="@color/textcolor"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/thumb_nail"
+        app:layout_constraintLeft_toRightOf="@id/thumb_nail"
+        app:layout_constraintTop_toBottomOf="@id/release_date"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
