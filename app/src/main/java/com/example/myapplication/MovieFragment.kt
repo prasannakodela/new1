@@ -17,6 +17,7 @@ import com.example.myapplication.viewModel.MovieViewModel
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import retrofit2.HttpException
 
 @AndroidEntryPoint
 @OptIn(ExperimentalPagingApi::class)
@@ -48,10 +49,13 @@ class MovieFragment : Fragment() {
         recyclerView.adapter = moviePagingAdapter
 
         lifecycleScope.launch {
-            movieViewModel.movieList.collect {
-                moviePagingAdapter.submitData(lifecycle, it)
+            try {
+                movieViewModel.movieList.collect {
+                    moviePagingAdapter.submitData(lifecycle, it)
+                }
+            }catch (e:HttpException){
+                e.printStackTrace()
             }
-
         }
     }
     private fun onItemClicked(response: Result){
